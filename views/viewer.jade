@@ -5,11 +5,10 @@ block content
   div
     a(href='/') go back home
   div#videoContainer
-    video#videoPlayer(controls='', preload="none")
+    video#videoPlayer(controls)
       source(src='/viewer/videos/rick-and-morty/#{video}', type='video/mp4')
       track(label="Español" kind="subtitles" srclang="es" src="/rick-and-morty/#{video}.vtt")
         
-
     style(media='screen').
       #videoPlayer
       {
