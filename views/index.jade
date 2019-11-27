@@ -1,49 +1,54 @@
-html
-  head
-    title Dont tell momma #{{title}}
-  body
-    h4 No, seriously, don't.
-    |       Don't be an asshole, support entretainment. #{title}
-    ul(style='grid-template-rows:repeat(2, 1fr)')
-      li
-        a(href='/viewer/rick-and-morty/ricknmorty0401')
-          div
-            header
-              h4
-                span
-                  | EP
-                  //
-                  | 1
-                  //
-                span Edge of Tomorty: Rick Die Rickpeat
-            p Morty goes nuts this time dawg. Rick does stuff. Season 4 premiere broh.
-      li
-        a(href='/viewer/rick-and-morty/ricknmorty0402')
-          div
-            header
-              h4
-                span
-                  | EP
-                  //
-                  | 2
-                  //
-                span The Old Man And The Seat
-            p We all have one thing in common broh. I don't know broh. Watch this one.
-      li
-        a(href='/viewer/rick-and-morty/ricknmorty0403')
-          div
-            header
-              h4
-                span
-                  | EP
-                  //
-                  | 3
-                  //
-                span One Crew Over The Crewcoo's Morty
-            p Lots of twists and turns this time Broh. Wear your helmets.
-    style(media='screen').
-      #videoPlayer
-      {
-      width: 500px;
-      height: 500px;
-      }
+extends layout.jade
+
+block content
+  h4 No, seriously, don't.
+  |       Don't be an asshole, support entretainment. #{title}
+  ul(style='grid-template-rows:repeat(2, 1fr)')
+    li.vidPlaceHolder
+      a(href='/viewer/rick-and-morty/ricknmorty0401')
+        div
+          header
+            h4
+              span
+                | EP &nbsp;
+                //
+                | 1: &nbsp;
+                //
+              span Edge of Tomorty: Rick Die Rickpeat
+              br
+              small Morty goes nuts this time dawg. Rick does stuff. Season 4 premiere broh.
+    li.vidPlaceHolder
+      a(href='/viewer/rick-and-morty/ricknmorty0402')
+        div
+          header
+            h4
+              span
+                | EP &nbsp;
+                //
+                | 2: &nbsp;
+                //
+              span The Old Man And The Seat
+              br
+              small We all have one thing in common broh. I don't know broh. Watch this one.
+    li.vidPlaceHolder
+      a(href='/viewer/rick-and-morty/ricknmorty0403')
+        div
+          header
+            h4
+              span
+                | EP &nbsp;
+                //
+                | 3: &nbsp;
+                //
+              span One Crew Over The Crewcoo's Morty
+              br
+              small Lots of twists and turns this time Broh. Wear your helmets.
+  style(media='screen').
+    #videoPlayer
+    {
+    width: 500px;
+    height: 500px;
+    }
+    .vidPlaceHolder{
+      margin-bottom: 35px;
+    }

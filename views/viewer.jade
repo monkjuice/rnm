@@ -1,24 +1,23 @@
-html
-  head
-    title Dont tell momma
-  body
-    h4 No, seriously, don't. enjoy :)
-    div
-      a(href='/') go back home
-    div#videoContainer
-      video#videoPlayer(controls='', muted='muted', autoplay='')
-        source(src='/viewer/videos/rick-and-morty/#{video}', type='video/mp4')
-        track(label="Español" kind="subtitles" srclang="es" src="/rick-and-morty/#{video}.vtt")
-          
+extends layout.jade
 
-      style(media='screen').
-        #videoPlayer
-        {
-        width: 500px;
-        height: 500px;
-        }
-        #videoContainer
-        {
-          margin:auto;
-          width: 50%;
-        }
+block content
+  h4 No, seriously, don't. enjoy :)
+  div
+    a(href='/') go back home
+  div#videoContainer
+    video#videoPlayer(controls='', muted='muted', autoplay='')
+      source(src='/viewer/videos/rick-and-morty/#{video}', type='video/mp4')
+      track(label="Español" kind="subtitles" srclang="es" src="/rick-and-morty/#{video}.vtt")
+        
+
+    style(media='screen').
+      #videoPlayer
+      {
+      width: 500px;
+      height: 500px;
+      }
+      #videoContainer
+      {
+        margin:auto;
+        width: 50%;
+      }
