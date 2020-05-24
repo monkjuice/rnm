@@ -6,8 +6,8 @@ block content
     a(href='/') go back home
   div#videoContainer
     video#videoPlayer(controls)
-      source(src='/viewer/videos/rick-and-morty/#{video}', type='video/mp4', playsinline)
-      track(label="Español" kind="subtitles" srclang="es" src="/rick-and-morty/#{video}.vtt")
+      source(src='/viewer/videos/#{video}', type='video/mp4', playsinline)
+      track(label="English" kind="subtitles" srclang="en" src="/subs/#{video}.vtt")
         
     style(media='screen').
       #videoPlayer

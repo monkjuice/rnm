@@ -3,14 +3,14 @@ const fs = require('fs')
 var router = express.Router();
 
 /* GET viewer. */
-router.get('/rick-and-morty/:episode', function(req, res, next) {
+router.get('/:episode', function(req, res, next) {
   res.render('viewer', { video: req.params.episode});
   console.log(req.params.episode)
 });
 
-router.get('/videos/rick-and-morty/:episode', function(req, res) {
+router.get('/videos/:episode', function(req, res) {
 
-  const videoPath = 'public/rick-and-morty/' + req.params.episode + '.mp4'
+  const videoPath = 'public/' + req.params.episode + '.mp4'
   const stat = fs.statSync(videoPath)
   const fileSize = stat.size
   const range = req.headers.range
